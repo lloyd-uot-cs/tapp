@@ -826,7 +826,7 @@ class AppState {
 
     // get a sorted list of course codes
     getCourseCodes() {
-        return this.getCoursesList().valueSeq().map(course => course.get('code')).sort();
+        return this.getCoursesList().toOrderedSet().map(course => course.get('code')).sort();
     }
 
     getCourseCodeById(course) {
